@@ -12,6 +12,7 @@ import { useState } from "react";
 
 // interface
 import { ITask } from "./interface/Task";
+import Modal from "./components/Modal";
 
 function App() {
   const [taskList, setTaskList] = useState<ITask[]>([]);
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <div>
+      <Modal />
       <Header />
       <main className={styles.main}>
         {/* form */}
