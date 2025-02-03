@@ -1,12 +1,26 @@
-import React from "react";
+// interface
+import { ITask } from "../interface/Task";
 
-interface IProps {}
+// CSS
+import styles from "./TaskList.module.css";
 
-const TaskList = (porps: IProps) => {
+interface IProps {
+  taskList: ITask[];
+}
+
+const TaskList = ({ taskList }: IProps) => {
   return (
-    <div>
-      <p>task list</p>
-    </div>
+    <>
+      {taskList.length > 0 ? (
+        taskList.map((task) => (
+          <div key={task.id}>
+            <p>{task.title}</p>
+          </div>
+        ))
+      ) : (
+        <p>Não há tarefas cadastradas</p>
+      )}
+    </>
   );
 };
 

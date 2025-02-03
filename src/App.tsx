@@ -23,12 +23,16 @@ function App() {
         {/* form */}
         <div>
           <h2>O que você vai fazer?</h2>
-          <TaskForm btnText="Criar tarefa" taskList={taskList} setTaskList={setTaskList} />
+          <TaskForm
+            btnText="Criar tarefa"
+            taskList={taskList}
+            setTaskList={setTaskList}
+          />
         </div>
         {/* tarefas */}
         <div>
           <h2>Suas tarefas:</h2>
-          <TaskList />
+          <TaskList taskList={taskList} />
         </div>
       </main>
       <Footer />
