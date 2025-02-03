@@ -7,10 +7,15 @@ import Footer from "./components/Footer";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 
+// hooks
+import { useState } from "react";
+
 // interface
 import { ITask } from "./interface/Task";
 
 function App() {
+  const [taskList, setTaskList] = useState<ITask[]>([]);
+
   return (
     <div>
       <Header />
@@ -18,7 +23,7 @@ function App() {
         {/* form */}
         <div>
           <h2>O que você vai fazer?</h2>
-          <TaskForm btnText="Criar tarefa" />
+          <TaskForm btnText="Criar tarefa" taskList={taskList} setTaskList={setTaskList} />
         </div>
         {/* tarefas */}
         <div>
