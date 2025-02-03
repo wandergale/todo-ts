@@ -7,9 +7,10 @@ import styles from "./TaskList.module.css";
 interface IProps {
   taskList: ITask[];
   handleDelete(id: number): void;
+  handleEdit(): void;
 }
 
-const TaskList = ({ taskList, handleDelete }: IProps) => {
+const TaskList = ({ taskList, handleDelete, handleEdit }: IProps) => {
   return (
     <>
       {taskList.length > 0 ? (
@@ -20,7 +21,7 @@ const TaskList = ({ taskList, handleDelete }: IProps) => {
               <p>Dificuldade: {task.difficulty}</p>
             </div>
             <div className={styles.actions}>
-              <i className="bi bi-pencil"></i>
+              <i className="bi bi-pencil" onClick={() => handleEdit()}></i>
               <i
                 className="bi bi-trash"
                 onClick={() => handleDelete(task.id)}
