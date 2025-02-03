@@ -1,4 +1,4 @@
-import React from "react";
+import styles from "./TaskForm.module.css";
 
 interface IProps {
   btnText: string;
@@ -6,17 +6,18 @@ interface IProps {
 
 const TaskForm = ({ btnText }: IProps) => {
   return (
-    <form>
-      <div>
+    <form className={styles.form}>
+      <div className={styles.input_container}>
         <label htmlFor="title">Título:</label>
         <input type="text" placeholder="Título da tarefa" name="title" />
       </div>
 
-      <div>
+      <div className={styles.input_container}>
         <label htmlFor="difficulty">Dificuldade:</label>
         <input type="text" placeholder="Título da tarefa" name="difficulty" />
       </div>
-      <input type="submit" value={btnText} />
+
+      <input type="submit" className={styles.btn} value={btnText} />
     </form>
   );
 };
