@@ -1,8 +1,9 @@
 # 🎈 Todo App - React + Typescript
 Este é um simples aplicativo de lista de tarefas (Todo App) desenvolvido com React e Typescript, permitindo que os usuários adicionem, editem e excluam tarefas.<br/>
 
-<img width="500px" src="https://github.com/user-attachments/assets/cca09d64-6c1d-488c-b2bf-7b22b292fc93"/>
-
+  <img alt="progama em execução" width="500px" height="450px" src="https://github.com/user-attachments/assets/cca09d64-6c1d-488c-b2bf-7b22b292fc93">
+  <img alt="edit modal" width="500px" height="450px" src="https://github.com/user-attachments/assets/c302f64e-3b6a-4600-94aa-ecae7c0b1b32"/>
+  
 ## 🚀 Tecnologias Utilizadas
 * React
 * Typescript
